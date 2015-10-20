@@ -1,0 +1,29 @@
+{
+  "name": "nd-interact",
+  "version": "1.0.0",
+  "description": "interaction plugin from grid and tree",
+  "keywords": [],
+  "homepage": "https://github.com/ndfront/nd-interact",
+  "author": {
+    "name": "crossjs",
+    "email": "liwenfu@crossjs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndfront/nd-interact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndfront/nd-interact/issues"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "nd-alert": "1.0.1",
+      "nd-tip": "1.0.0"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}
