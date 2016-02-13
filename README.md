@@ -1,13 +1,15 @@
 # nd-interact
 
-[![spm version](http://spm.crossjs.com/badge/nd-interact)](http://spm.crossjs.com/package/nd-interact)
+[![Travis](https://img.shields.io/travis/ndfront/nd-interact.svg?style=flat-square)](https://github.com/ndfront/nd-interact)
+[![Coveralls](https://img.shields.io/coveralls/ndfront/nd-interact.svg?style=flat-square)](https://github.com/ndfront/nd-interact)
+[![NPM version](https://img.shields.io/npm/v/nd-interact.svg?style=flat-square)](https://npmjs.org/package/nd-interact)
 
 > interaction plugin from grid and tree
 
 ## 安装
 
 ```bash
-$ spm install nd-interact --save
+$ npm install nd-interact --save
 ```
 
 ## 使用
