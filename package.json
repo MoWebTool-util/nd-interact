@@ -22,8 +22,8 @@
   "licenses": "MIT",
   "main": "index.js",
   "dependencies": {
-    "nd-alert": "^3.0.0",
-    "nd-tip": "^3.0.0"
+    "nd-alert": "^3.0.1",
+    "nd-tip": "^3.0.1"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
