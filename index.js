@@ -6,6 +6,7 @@
 'use strict';
 
 var Alert = require('nd-alert');
+var Confirm = require('nd-confirm');
 var Tip = require('nd-tip');
 
 module.exports = function() {
@@ -61,6 +62,43 @@ module.exports = function() {
             this.before('destroy', function() {
               this.dialog.hide();
             });
+          }
+        });
+      } else if (interact.type === 'confirm') {
+        plugin.setOptions('view', {
+          className: 'ui-view-confirm',
+          beforeSetup: function() {
+            this.before('render', function() {
+              var view = this;
+
+              view.confirm = new Confirm({
+                width: interact.width || 360,
+                // closeTpl: '',
+                confirmTpl: interact.confirmTpl,
+                cancelTpl: interact.cancelTpl,
+                message: '',
+                title: interact.title,
+                hideOnKeyEscape: false,
+                events: {
+                  // override
+                  'click [data-role=close]': function(e) {
+                    e.preventDefault();
+                    plugin.trigger('hide', view);
+                  }
+                }
+              }).render();
+              // change parentNode
+              view.set('parentNode', view.confirm.$('[data-role="message"]'));
+            });
+
+            this.after('render', function() {
+              this.confirm.show();
+            });
+
+            this.before('destroy', function() {
+              this.confirm.hide();
+            });
+
           }
         });
       } else if (interact.type === 'tip') {
